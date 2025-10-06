@@ -14,9 +14,6 @@
     color: var(--jdgm-primary-color);
 }
 
-#hamburg {
-    display: none;
-}
 
 .color {
     color: var(--jdgm-write-review-text-color);
@@ -59,12 +56,14 @@ li {
 .hidden {
     overflow: hidden;
 }
+/* display none property */
+#hamburg , div#cross , .dropdown-content , .dropdown-content-about , div#onCLickLinks{
+    display: none;
+}
 
 
 /* hamburg and cross css */
-div#cross {
-    display: none;
-}
+
 
 div#hamburg,
 div#cross {
@@ -90,7 +89,6 @@ div#cross a {
 
 .announcementBar-content {
     height: 38px;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -116,12 +114,11 @@ div#cross a {
 /* ------------------------header links---------------------- */
 .nav-links {
     max-width: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
-    /* margin-left: 56px; */
 }
 
-ul.links-of-header {
+ul.links-of-header-inner {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -249,7 +246,6 @@ a.grid:hover .angle-down {
 }
 
 .dropdown-content {
-    display: none;
     width: 99.88%;
     position: absolute;
     background-color: #f9f9f9;
@@ -340,14 +336,15 @@ ul.ul-links li+li {
 }
 
 .dropdown-content-about {
-    display: none;
     position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     top: 55px;
-    padding: 19px 30px 17px 9px;
+    padding: 19px 30px 26px 9px;
     width: 11%;
     height: 59px;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 22px;
 }
 
 .dropdown:hover .dropdown-content-about {
@@ -368,7 +365,8 @@ ul.dropdown-content-inner2 {
 
 /*---------------------------- on search click btn search bar css ------------------------*/
 #searchBarPopUp {
-    display: none;
+    visibility: hidden;
+    /* display: none; */
 }
 
 div#searchIcon {
@@ -380,6 +378,7 @@ div#crossBtn {
 }
 
 div#search-bar-content {
+    /* visibility:visible; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -438,7 +437,8 @@ div#width-set {
 
 /* -------------------------------on dustbin button side bar --------------------------------- */
 #sideBar {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
 }
 
 div#side-bar-content-inner {
@@ -455,12 +455,17 @@ div#sideBar-content {
     width: 28%;
     position: fixed;
     top: 0%;
-    right: 0;
+    right: -1%;
     z-index: 1;
     height: 100%;
     display: flex;
     justify-content: center;
-    color: var(--jdgm-reviewer-name-color)
+    color: var(--jdgm-reviewer-name-color);
+    transition: right 0.8s ease;
+}
+
+div#sideBar-content .open {
+    right: 0px;
 }
 
 div#sidebarCrossBtn {
@@ -515,7 +520,6 @@ div#onCLickLinks {
     top: 16%;
     left: 5%;
     width: 13%;
-    display: none;
 }
 
 div#onCLickLinks nav {
@@ -531,10 +535,6 @@ div#onCLickLinks nav ul {
     gap: 18px;
 }
 
-div#onCLickLinks nav ul a {
-    color: #435870
-}
-
 a.onclickabout,
 a.onclickshop {
     display: flex;
@@ -546,13 +546,13 @@ div#boyIcon {
     width: 14px;
     background-color: var(--jdgm-primary-color);
     color: white;
-    padding: 10px 22px;
+    padding: 4px 9px;
 }
 
 div#icons-of-boy {
     position: fixed;
     right: 0px;
-    bottom: 80px;
+    bottom: 100px;
 }
 
 /* main property */
@@ -661,7 +661,7 @@ div#dog-with-conetnt-inner p {
     }
 
     div#sideBar-content {
-        width: 40%;
+        width: 100%;
     }
 
     .heading-btn {
@@ -748,9 +748,10 @@ div#dog-with-conetnt-inner p {
         width: 37%;
         display: none;
     }
+
     div#dog-with-conetnt-inner a {
-    padding: 8px 20px;
-}
+        padding: 8px 20px;
+    }
 }
 
 /* ------------------------------395px------------------------------ */
@@ -768,10 +769,6 @@ div#dog-with-conetnt-inner p {
     }
 }
 
-
-
-
-
 :root {
     --jdgm-primary-color: #435870;
     --jdgm-secondary-color: rgba(67, 88, 112, 0.1);
@@ -782,4 +779,5 @@ div#dog-with-conetnt-inner p {
     --jdgm-border-radius: 0;
     --jdgm-reviewer-name-color: #53565A;
     --jdgm-black-color: black;
+    --jdgm-bg-color:rgb(67, 88, 112);
 }
