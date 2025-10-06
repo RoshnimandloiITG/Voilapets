@@ -76,8 +76,6 @@ div#cross a {
     color: #53565A;
 }
 
-
-
 /* announcementBar */
 .announcementBar {
     justify-content: center;
@@ -87,6 +85,7 @@ div#cross a {
     font-size: 13px;
     color: var(--jdgm-reviewer-name-color);
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .announcementBar-content {
@@ -104,7 +103,7 @@ div#cross a {
 
 /* header css */
 
-/* header logo */
+/* -----------------------------header logo -------------------*/
 .header-logo img {
     width: 120px;
     height: 36px;
@@ -114,18 +113,21 @@ div#cross a {
     max-width: 21%;
 }
 
-/* header links */
-/* .nav-links {
+/* ------------------------header links---------------------- */
+.nav-links {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    /* margin-left: 56px; */
+}
+
+ul.links-of-header {
     width: 100%;
     display: flex;
     justify-content: center;
-}
-.nav-links ul {
-    width: 51%;
-    display: flex;
-    justify-content: center;
     gap: 36px;
-} */
+}
+
 li.shop a,
 li.about a {
     display: flex;
@@ -141,7 +143,7 @@ li.about {
     width: 9px;
 }
 
-/* header icons */
+/* ---------------------------header icons -----------------*/
 li#searchBar,
 li#profileBar,
 li#dustbinBar {
@@ -153,7 +155,14 @@ li#dustbinBar {
     gap: 15px;
 }
 
-/* video */
+.line {
+    width: 0.1px;
+    height: 23px;
+    background: #d3cccc;
+    margin-top: 2px;
+}
+
+/*------------------------------- video --------------------------*/
 video {
     width: 100%;
     height: 850px;
@@ -167,12 +176,6 @@ video {
     width: 96%;
     align-items: anchor-center;
 }
-
-/* div#header-with-links {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-} */
 
 div#header-with-links {
     width: 95%;
@@ -197,7 +200,7 @@ div#header-content {
 }
 
 
-/* header + banner content */
+/* --------------------header + banner content-------------------- */
 .heading-btn {
     align-items: center;
 }
@@ -227,7 +230,7 @@ div#header-content {
 }
 
 
-/* hover property on links  */
+/*---------------- hover property on links ------------------- */
 span.angle-down:hover {
     transform: rotate(180deg);
 }
@@ -240,7 +243,27 @@ a.grid:hover .angle-down {
     border-bottom: 2px solid var(--jdgm-primary-color);
 }
 
-/* shop div */
+/*--------------------- shop div ---------------------*/
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    width: 99.88%;
+    position: absolute;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    top: 54px;
+    left: 0px;
+    height: 450px;
+    outline: 1px solid white;
+    border-radius: 6px;
+    margin-left: 1px;
+    padding: 13px 0px;
+}
+
 #imageDivInner img {
     height: 350px;
     width: 100%;
@@ -310,20 +333,8 @@ ul.ul-links li+li {
     font-size: 15px;
 }
 
-/* hover property on links  */
-span.angle-down:hover {
-    transform: rotate(180deg);
-}
 
-a.grid:hover .angle-down {
-    transform: rotate(180deg);
-}
-
-.linkchange:hover {
-    border-bottom: 2px solid var(--jdgm-primary-color);
-}
-
-/* links drop down  */
+/* ----------------------------------about link  drop down ------------------------------------- */
 .dropdown {
     display: flex;
 }
@@ -349,33 +360,13 @@ ul.dropdown-content-inner2-about {
     gap: 18px;
 }
 
-.dropdown-content {
-    display: none;
-    width: 99.88%;
-    position: absolute;
-    background-color: #f9f9f9;
-    overflow-y: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    top: 54px;
-    left: 0px;
-    height: 450px;
-    outline: 1px solid white;
-    border-radius: 6px;
-    margin-left: 1px;
-    padding: 13px 0px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 ul.dropdown-content-inner2 {
     display: flex;
     flex-direction: column;
     padding: 8px;
 }
 
-/* on search click btn search bar css */
+/*---------------------------- on search click btn search bar css ------------------------*/
 #searchBarPopUp {
     display: none;
 }
@@ -445,7 +436,7 @@ div#width-set {
     justify-content: center;
 }
 
-/* on dustbin button side bar  */
+/* -------------------------------on dustbin button side bar --------------------------------- */
 #sideBar {
     display: none;
 }
@@ -493,7 +484,7 @@ div#side-bar-content-inner>div {
     gap: 8px;
 }
 
-/* chat box css */
+/*----------------------------- chat box css--------------------------------- */
 .chatBox {
     position: fixed;
     bottom: 80px;
@@ -518,7 +509,117 @@ div#side-bar-content-inner>div {
     color: white;
 }
 
-/* media query */
+/* ----------------------onlcick css of links-------------------------  */
+div#onCLickLinks {
+    position: fixed;
+    top: 16%;
+    left: 5%;
+    width: 13%;
+    display: none;
+}
+
+div#onCLickLinks nav {
+    background: white;
+    padding: 21px;
+    display: flex;
+    width: 100%;
+}
+
+div#onCLickLinks nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+div#onCLickLinks nav ul a {
+    color: #435870
+}
+
+a.onclickabout,
+a.onclickshop {
+    display: flex;
+    gap: 5px;
+}
+
+/* ------------------------------icons vale ldke ki css-------------------------- */
+div#boyIcon {
+    width: 14px;
+    background-color: var(--jdgm-primary-color);
+    color: white;
+    padding: 10px 22px;
+}
+
+div#icons-of-boy {
+    position: fixed;
+    right: 0px;
+    bottom: 80px;
+}
+
+/* main property */
+/*--------------------------------- first section ------------------------------*/
+#content-photo-grid img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+div#content-photo-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.01fr 0.9fr;
+    gap: 16px;
+    width: 95%;
+}
+
+div#page-with-phts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+}
+
+div#dog-with-conetnt {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 28px;
+    background: #EEE9E3;
+    max-height: 99%;
+    border-radius: 8px;
+}
+
+div#dog-with-conetnt-inner a {
+    padding: 17px 36px;
+}
+
+div#dog-with-conetnt-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: anchor-center;
+    width: 99%;
+    color: #53565A;
+    padding: 40px 0px;
+}
+
+div#dog-with-conetnt-inner h2 {
+    font-size: 33px;
+}
+
+div#dog-with-conetnt-inner p {
+    padding: 0px 25px;
+}
+
+/* ------------------------------1050--------------------------------- */
+@media screen and (max-width : 1050px) {
+    div#content-photo-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/*---------------------- media query (947)-------------------------------- */
 @media screen and (max-width : 947px) {
     div#header-with-links {
         width: 91%;
@@ -573,6 +674,31 @@ div#side-bar-content-inner>div {
     }
 }
 
+/* ----------------------730---------------------------------- */
+@media screen and (max-width : 700px) {
+    .chatBox {
+        height: 48px;
+        font-size: 19px;
+        padding: 0 5px;
+        padding-right: 13px;
+    }
+
+    div#dog-with-conetnt {
+        line-height: 22px;
+    }
+
+    div#dog-with-conetnt-inner p,
+    div#dog-with-conetnt-inner a {
+        font-size: 12px;
+    }
+
+    div#dog-with-conetnt-inner h2 {
+        font-size: 17px;
+    }
+}
+
+
+/* -------------------------------------------(569px)------------------------------ */
 @media screen and (max-width : 569px) {
     .header-logo img {
         width: 84px;
@@ -592,24 +718,19 @@ div#side-bar-content-inner>div {
     div#searchIcon {
         width: 5%;
     }
-}
 
-@media screen and (max-width : 395px) {
-    div#header-with-links {
-        width: 91%;
-        padding: 0px 0px;
-        border-radius: 6px;
+    .chatBox {
+        padding: 0 2px;
+        padding-right: 0px;
     }
 
-
-
-    video {
-        max-width: 100%;
-        height: 400px;
-        object-fit: cover;
+    span.chat {
+        display: none;
     }
 }
 
+
+/* ---------------------------------460-----------------------------------*/
 @media screen and (max-width : 460px) {
     div#sideBar-content {
         width: 40%;
@@ -627,39 +748,29 @@ div#side-bar-content-inner>div {
         width: 37%;
         display: none;
     }
+    div#dog-with-conetnt-inner a {
+    padding: 8px 20px;
+}
 }
 
-@media screen and (max-width : 700px) {
-    .chatBox {
+/* ------------------------------395px------------------------------ */
+@media screen and (max-width : 395px) {
+    div#header-with-links {
+        width: 91%;
+        padding: 0px 0px;
+        border-radius: 6px;
+    }
 
-        height: 48px;
-        font-size: 19px;
-        padding: 0 5px;
-        padding-right: 13px;
+    video {
+        max-width: 100%;
+        height: 400px;
+        object-fit: cover;
     }
 }
 
-@media screen and (max-width:1060px) {
-    div#content-photo-grid {
-        grid-template-columns: 1fr;
-    }
 
-}
 
-/* correct css */
-.nav-links {
-    max-width: 100%;
-    display: flex;
-    justify-content: center;
-    /* margin-left: 56px; */
-}
 
-ul.links-of-header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 36px;
-}
 
 :root {
     --jdgm-primary-color: #435870;
@@ -671,104 +782,4 @@ ul.links-of-header {
     --jdgm-border-radius: 0;
     --jdgm-reviewer-name-color: #53565A;
     --jdgm-black-color: black;
-}
-
-/* onlcick css of links  */
-div#onCLickLinks {
-    position: fixed;
-    top: 25%;
-    left: 5%;
-    width: 13%;
-    display: none;
-}
-
-div#onCLickLinks nav {
-    background: white;
-    padding: 21px;
-    display: flex;
-    width: 100%;
-}
-
-div#onCLickLinks nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-div#onCLickLinks nav ul a {
-    color: #435870
-}
-
-a.onclickabout,
-a.onclickshop {
-    display: flex;
-    gap: 5px;
-}
-
-/* icons vale ldke ki css */
-div#boyIcon {
-    width: 14px;
-    background-color: var(--jdgm-primary-color);
-    color: white;
-    padding: 10px 22px;
-}
-
-div#icons-of-boy {
-    position: fixed;
-    right: 0px;
-    bottom: 80px;
-}
-
-/* main property */
-/* first section */
-#content-photo-grid img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-div#content-photo-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.01fr 0.9fr;
-    gap: 16px;
-    width: 95%;
-}
-
-div#page-with-phts {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 80px 0px;
-}
-
-div#dog-with-conetnt {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    line-height: 28px;
-    background: #EEE9E3;
-    max-height: 99%;
-    border-radius: 8px;
-}
-
-div#dog-with-conetnt-inner a {
-    padding: 17px 36px;
-}
-
-div#dog-with-conetnt-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: anchor-center;
-    width: 99%;
-    color: #53565A;
-}
-
-div#dog-with-conetnt-inner h2 {
-    font-size: 33px;
-}
-
-div#dog-with-conetnt-inner p {
-    padding: 0px 25px;
 }
