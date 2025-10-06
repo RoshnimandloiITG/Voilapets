@@ -65,10 +65,14 @@ li {
 div#cross {
     display: none;
 }
-div#hamburg , div#cross {
+
+div#hamburg,
+div#cross {
     width: 22px;
 }
-div#hamburg a  , div#cross a{
+
+div#hamburg a,
+div#cross a {
     color: #53565A;
 }
 
@@ -618,10 +622,11 @@ div#side-bar-content-inner>div {
         font-size: 23px;
         text-align: center;
     }
+
     div#onCLickLinks {
-    width: 37%;
-    display: none;
-}
+        width: 37%;
+        display: none;
+    }
 }
 
 @media screen and (max-width : 700px) {
@@ -635,9 +640,12 @@ div#side-bar-content-inner>div {
 }
 
 @media screen and (max-width:1060px) {
-    
-    
+    div#content-photo-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
+
 /* correct css */
 .nav-links {
     max-width: 100%;
@@ -673,21 +681,26 @@ div#onCLickLinks {
     width: 13%;
     display: none;
 }
+
 div#onCLickLinks nav {
     background: white;
     padding: 21px;
     display: flex;
     width: 100%;
 }
+
 div#onCLickLinks nav ul {
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
-div#onCLickLinks nav ul a{
-color:#435870
+
+div#onCLickLinks nav ul a {
+    color: #435870
 }
-a.onclickabout , a.onclickshop {
+
+a.onclickabout,
+a.onclickshop {
     display: flex;
     gap: 5px;
 }
@@ -695,10 +708,11 @@ a.onclickabout , a.onclickshop {
 /* icons vale ldke ki css */
 div#boyIcon {
     width: 14px;
-    background-color:var(--jdgm-primary-color);
+    background-color: var(--jdgm-primary-color);
     color: white;
     padding: 10px 22px;
 }
+
 div#icons-of-boy {
     position: fixed;
     right: 0px;
@@ -707,22 +721,25 @@ div#icons-of-boy {
 
 /* main property */
 /* first section */
-#content-photo-grid  img {
+#content-photo-grid img {
     width: 100%;
     border-radius: 8px;
 }
+
 div#content-photo-grid {
     display: grid;
     grid-template-columns: 0.9fr 1.01fr 0.9fr;
     gap: 16px;
     width: 95%;
 }
+
 div#page-with-phts {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 80px 0px;
 }
+
 div#dog-with-conetnt {
     width: 100%;
     display: flex;
@@ -734,20 +751,24 @@ div#dog-with-conetnt {
     max-height: 99%;
     border-radius: 8px;
 }
+
 div#dog-with-conetnt-inner a {
     padding: 17px 36px;
 }
+
 div#dog-with-conetnt-inner {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: anchor-center;
     width: 99%;
-    color:#53565A;
+    color: #53565A;
 }
+
 div#dog-with-conetnt-inner h2 {
     font-size: 33px;
 }
+
 div#dog-with-conetnt-inner p {
     padding: 0px 25px;
 }
